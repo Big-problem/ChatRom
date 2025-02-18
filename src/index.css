@@ -1,0 +1,522 @@
+body {
+    background-color: rgb(88, 138, 112);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.title {
+    text-align: center;
+}
+
+.new-form {
+    position: absolute;
+    border-style: none;
+    border-radius: 5px;
+    padding: 10px;
+    padding-bottom: 30px;
+    margin: 10px;
+    width: 500px;
+    background-color: rgb(252, 255, 252, 0.8);
+    
+    animation-name: animate;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+}
+.error {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 250px;
+    margin: 10px;
+    font-size: 20px;
+    background-color: rgb(255, 0, 0, 0.6);
+    padding: 5px;
+    text-align: center;
+    color: rgb(229, 195, 195);
+    border-radius: 5px;
+}
+.form-row {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    margin: 10px;
+    font-size: 30px;   
+}
+
+.form-row-image {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    margin: 10px;
+    font-size: 25px;   
+}
+.form-row-image label {
+    margin-bottom: 5px;
+}
+.uploadimage {
+    cursor: pointer;
+}
+.form-input {
+    padding: 4px;
+    border: 1px;
+    border-style: solid;
+    border-radius: 2px;
+}
+
+.form-btn {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: aqua;
+    cursor: pointer;
+    border: none;
+    width: 250px;
+    height: 30px;
+    font-size: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    margin-left: 10px;
+    margin-top: 10px;
+}
+    
+.form-btn:hover {
+    background-color: rgb(44, 191, 191);
+}
+
+.form-btn:active {
+    background-color: aqua;
+    box-shadow: none;
+}
+
+.form-btn:disabled {
+    background-color: rgb(44, 191, 191);
+    cursor: wait;
+    box-shadow: none;
+}
+.form-btn:disabled:active {
+    background-color: rgb(44, 191, 191);
+    cursor: wait;
+}
+
+.form-link {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 250px;
+    margin: 10px;
+}
+
+.outside {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    width: 80%;
+    height: 90%; 
+    border-style: solid;
+    border-color: black;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.rooms {
+    width: 0;
+    flex: 1;
+    height: 100%;
+    position: relative;
+}
+
+.user-info {
+    display: flex;
+    padding: 10px;
+    background-color: rgb(123, 45, 175);
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    color: rgba(255, 255, 255, 0.767);
+}
+
+.logo {
+    font-weight: 500;
+    font-size: 25px;
+}
+
+.user-log {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.profile-picture {
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.room-containter {
+    background-color: rgb(92, 93, 173);
+    height: calc(100% - 80px - 36px);
+    overflow-y: auto;
+}
+
+.room {
+    font-size: 18px;
+    padding: 10px;
+    color: rgba(255, 255, 255, 0.767);
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    width: calc(100% - 20px);
+}
+
+.room span {
+    font-size: 20px;
+    max-width:320px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.room p {
+    font-size: 14px;
+    margin: 0;
+    color: lightgray;
+    max-width:300px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.room:hover {
+    background-color: rgb(113, 114, 174);
+}
+
+.add-chatroom-logout {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    gap: 3px;
+}
+
+.add-chatroom-btn {
+    padding: 10px;
+    background-color: rgb(94, 214, 214);
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    flex: 3;
+}
+.add-chatroom-btn:hover {
+    background-color: rgb(94, 214, 214, 0.5);
+}
+
+.logoutbtn {
+    padding: 10px;
+    flex: 1;
+    background-color: rgb(228, 155, 204);
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+.logoutbtn:hover {
+    background-color: rgb(228, 155, 204, 0.5);
+}
+
+.message-area {
+    width: 0;
+    flex: 3;
+    height: 100%;
+    position: relative;
+}
+
+.chatroom-name {
+    background-color: rgb(92, 93, 173);
+    border-top-right-radius: 10px;
+    padding: 10px;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.767);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+}
+
+.chatroom-name p{
+    font-weight: 500;
+    font-size: 30px;
+}
+
+.add-user-btn {
+    padding: 10px;
+    background-color: rgb(94, 214, 214);
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.add-user-btn:hover {
+    background-color: rgb(94, 214, 214, 0.5);
+}
+
+.system-message {
+    text-align: center;
+    margin-top: 10px;
+}
+.system-message span {
+    background-color: rgb(76, 70, 70);
+    padding: 5px;
+    border-radius: 8px;
+    font-size: 13px;
+    color: white;
+}
+
+.message-main {
+    height: calc(100% - 80px - 30px - 10px);
+    background-color: rgb(144, 144, 193);
+    font-size: 18px;
+    overflow-y: auto;
+    padding-bottom: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.message {
+    color: rgba(255, 255, 255, 0.767);
+    display: flex;
+    justify-content: start;
+    margin-top: 10px;
+    width: 50%;
+}
+
+.message-mine {
+    color: rgba(255, 255, 255, 0.767);
+    display: flex;
+    justify-content: end;
+    margin-top: 10px;
+    width: 50%;
+    margin-left: auto;
+}
+
+.name-other-message {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 100%;
+}
+
+.show-other-name {
+    display: inline;
+    font-size: 13px;
+    margin: 0;
+    margin-left: 12px;
+}
+
+.message-itself {
+    margin: 0;
+    background-color: rgb(92, 93, 173);
+    margin-left: 10px;
+    padding: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    max-width: 100%;
+    overflow-wrap: break-word; 
+}
+
+.name-message {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    overflow-wrap: break-word; 
+    width: 100%;
+    position: relative;
+}
+
+.show-name {
+    display: inline;
+    font-size: 13px;
+    margin: 0;
+    margin-right: 12px;
+}
+
+.my-message-itself {
+    text-align: left;
+    margin: 0;
+    background-color: rgb(92, 93, 173);
+    margin-right: 10px;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    max-width: 100%;
+    overflow-wrap: break-word; 
+    position: relative;
+}
+
+.message-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.clear-text {
+    background-color: red;
+    width: 20px;
+    height: 20px;
+    border-style: none;
+    border-radius: 50%;
+    position: absolute;
+    left: -23px;
+    cursor: pointer;
+}
+.clear-text:hover {
+    background-color: rgb(199, 120, 120);
+    width: 20px;
+    height: 20px;
+    border-style: none;
+    border-radius: 50%;
+    position: absolute;
+    left: -23px;
+}
+
+.clear-text2 {
+    background-color: red;
+    width: 20px;
+    height: 20px;
+    border-style: none;
+    border-radius: 50%;
+    position: absolute;
+    left: -23px;
+    bottom: 3px;
+    cursor: pointer;
+}
+.clear-text2:hover {
+    background-color: rgb(199, 120, 120);
+    width: 20px;
+    height: 20px;
+    border-style: none;
+    border-radius: 50%;
+    position: absolute;
+    left: -23px;
+}
+
+.bottom-btn {
+    position: absolute;
+    bottom: 34px;
+    right: 20px;
+    width: 25px;
+    height: 25px;
+    border-style: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.bottom-btn:hover {
+    background-color: gray;
+}
+.material-symbols-outlined {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.cancel{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -47%);
+}
+
+.message-input {
+    display: flex;
+    width: 100%;
+    height: 30px;
+}
+
+.text-input {
+    width: 80%;
+}
+
+.add-photo-input {
+    display: none;
+}
+
+.lab1 {
+    position: relative;
+    height: 30px;
+    width: 30px;
+    background-color: rgb(92, 93, 173);
+    cursor: pointer;
+}
+
+.lab1:hover {
+    background-color: rgb(113, 114, 174);
+}
+
+.message-btn {
+    width: 20%;
+    background-color: rgb(92, 93, 173);
+    color: rgba(255, 255, 255, 0.767);
+    border: none;
+    cursor: pointer;
+}
+
+.message-btn:hover {
+    background-color: rgb(113, 114, 174);
+}
+
+
+
+@media ((min-width: 732px) and (max-width: 1300px)) {
+    .logo {
+        display: none;
+    }
+}
+
+@media (max-width: 930px) {
+    .add-chatroom-logout {
+        flex-direction: column;
+    }
+    .room-containter {
+        height: calc(100% - 80px - 36px - 36px);
+    }
+}
+
+@media (max-width: 732px) {
+    .message-area {
+        display: none;
+    }
+}
+
+@media (max-height: 600px) {
+    .smaller {
+        font-size: 20px;
+        flex-direction: row;
+        width: 450px;
+        text-align: center;
+        justify-content: center;
+    }
+}
+
+@keyframes animate {
+    0% {
+        transform: scale(0, 0.002);
+    }
+    50% {
+        transform: scale(1, 0.002);
+    }
+}
