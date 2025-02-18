@@ -1,5 +1,11 @@
 # Software Studio 2023 Spring Midterm Project
 
+### Firebase page link
+
+- Web Page `URL`
+1. chatroom-28e7f.web.app
+2. chatroom-28e7f.firebaseapp.com
+
 ### Scoring
 
 | **Basic components**                             | **Score** | **Check** |
@@ -65,15 +71,7 @@
 - Sending image and unsending message are explained above.
 - RWD and Security are both fullfilled. Test them if you need.
 
-### Firebase page link
-
-- Your web page `URL`
-1. chatroom-28e7f.web.app
-2. chatroom-28e7f.firebaseapp.com
-
 ### Others (Optional)
-
-I wan to SLEEP!
 
 <style>
 table th{
